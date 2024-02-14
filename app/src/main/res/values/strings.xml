@@ -1,13 +1,8 @@
 <resources>
     <string name="app_name">Smart Massager</string>
-    <string name="text_left_shoulder_blade">Это левая лопатка:)</string>
-    <string name="text_right_shoulder_blade">Это правая лопатка:)</string>
-    <string name="text_left_back_neck">Это левая задняя сторона шеи:)</string>
-    <string name="text_right_back_neck">Это правая задняя сторона шеи:)</string>
-    <string name="text_left_neck">Это левая боковая сторона шеи:)</string>
-    <string name="text_right_neck">Это правая боковая сторона шеи:)</string>
-    <string name="text_left_knee">Это левое колено:)</string>
-    <string name="text_right_knee">Это правое колено:)</string>
-    <string name="text_left_clavicle">Это левая ключица:)</string>
-    <string name="text_right_clavicle">Это правая ключица:)</string>
+    <string name="back_neck">
+        Это точка шейного отдела.
+        Боль может возникнуть от долгого нахождения в одном положении. Чаще всего это работа за компьютером или телефоном.
+        Чтобы избавиться от боли, прикрепите к выделенной точке устройство и  включите работу на 10-15 минут
+    </string>
 </resources>

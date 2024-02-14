@@ -17,18 +17,9 @@ public class PointCardActivity extends AppCompatActivity {
         txt = findViewById(R.id.textViewPointCard);
         int id = Integer.parseInt(getIntent().getStringExtra("pointId"));
 
-        if (id == R.id.imageViewBackLeftNeck) txt.setText(R.string.text_left_back_neck);
-        else if (id == R.id.imageViewBackRightNeck) txt.setText(R.string.text_right_back_neck);
-
-        else if (id == R.id.imageViewLeftClavicle) txt.setText(R.string.text_left_clavicle);
-        else if (id == R.id.imageViewRightClavicle) txt.setText(R.string.text_right_clavicle);
-
-        else if (id == R.id.imaggeViewBackCalf) txt.setText(R.string.text_left_knee);
-        else if (id == R.id.imageViewRightBackCalf) txt.setText(R.string.text_right_knee);
-
-        else if (id == R.id.imageViewNeckLeftTop) txt.setText(R.string.text_left_neck);
-        else if (id == R.id.imageViewNeckRightTop) txt.setText(R.string.text_right_neck);
-
+        if (id == R.id.imageViewBackLeftNeck || id == R.id.imageViewBackRightNeck) {
+            txt.setText(R.string.back_neck);
+        }
     }
 
     public void onClickBack(View view) {
