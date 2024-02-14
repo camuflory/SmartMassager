@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewTheme"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:onClick="setNewTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
+        app:srcCompat="@drawable/black_moon" />
+
+    <ImageView
+        android:id="@+id/imageViewBody"
+        android:layout_width="270dp"
+        android:layout_height="560dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228"
+        app:srcCompat="@drawable/backside" />
+
+    <Button
+        android:id="@+id/buttonRotateRight"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#62C152"
+        android:onClick="rotateBodyToRight"
+        app:icon="@android:drawable/ic_media_ff"
+        app:iconPadding="0dp"
+        app:iconSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.772"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
+
+    <Button
+        android:id="@+id/buttonRotateLeft"
+        android:layout_width="86dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#62C052"
+        android:onClick="rotateBodyToLeft"
+        app:icon="@android:drawable/ic_media_rew"
+        app:iconPadding="0dp"
+        app:iconSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.981" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutRight"
+        android:layout_width="270dp"
+        android:layout_height="560dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228">
+
+        <ImageView
+            android:id="@+id/imageViewRightBackCalf"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.384"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.796"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightFrontCalf"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.866"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightForearm"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.431"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewNeckRightTop"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.464"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.09"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewNeckRightBottom"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.161"
+            app:srcCompat="@drawable/green_point" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutBack"
+        android:layout_width="270dp"
+        android:layout_height="560dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228">
+
+        <ImageView
+            android:id="@+id/imageViewBackRightNeck"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.584"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.161"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewBackLeftNeck"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.364"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.161"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightBackHead"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.077"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftBackHead"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.408"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.077"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightTrapezius"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.264"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftTrapezius"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.39"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.264"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewWaistRightTop"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.368"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewWaistRightBottom"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.418"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewWaistLeftTop"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.39"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.368"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewWaistLeftBottom"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.392"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.418"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewForearmLeftBack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.116"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.405"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewForearmRightBack"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.828"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.405"
+            app:srcCompat="@drawable/green_point" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutLeft"
+        android:layout_width="270dp"
+        android:layout_height="560dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228">
+
+        <ImageView
+            android:id="@+id/imageViewLeftForearm"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.427"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewNeckLeftBottom"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.151"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imaggeViewBackCalf"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.616"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.792"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imaggeViewFrontCalf"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.844"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewNeckLeftTop"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.536"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.094"
+            app:srcCompat="@drawable/green_point" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutFront"
+        android:layout_width="270dp"
+        android:layout_height="560dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.228">
+
+        <ImageView
+            android:id="@+id/imageViewLeftInnerBottomCalf"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.839"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightInnerBottomCalf"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.349"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.839"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftInnerTopCalf"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.789"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightInnerTopCalf"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.349"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.789"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftOuterCalf"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.654"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.789"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightOuterCalf"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.265"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.789"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftHipTop"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftHipMedium"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.594"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftHipBottom"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.651"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightHipBottom"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.337"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.651"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightHipMedium"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.321"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.594"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightHipTop"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.321"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.538"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftBiceps"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.769"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.317"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightBiceps"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.146"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.317"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftShoulderRoot"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.217"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightShoulderRoot"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.217"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightChest"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.239"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftChest"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.567"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.239"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewLeftClavicle"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.184"
+            app:srcCompat="@drawable/green_point" />
+
+        <ImageView
+            android:id="@+id/imageViewRightClavicle"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:onClick="onClickPoint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.41"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.185"
+            app:srcCompat="@drawable/green_point" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

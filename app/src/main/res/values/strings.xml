@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Smart Massager</string>
+    <string name="text_left_shoulder_blade">Это левая лопатка:)</string>
+    <string name="text_right_shoulder_blade">Это правая лопатка:)</string>
+    <string name="text_left_back_neck">Это левая задняя сторона шеи:)</string>
+    <string name="text_right_back_neck">Это правая задняя сторона шеи:)</string>
+    <string name="text_left_neck">Это левая боковая сторона шеи:)</string>
+    <string name="text_right_neck">Это правая боковая сторона шеи:)</string>
+    <string name="text_left_knee">Это левое колено:)</string>
+    <string name="text_right_knee">Это правое колено:)</string>
+    <string name="text_left_clavicle">Это левая ключица:)</string>
+    <string name="text_right_clavicle">Это правая ключица:)</string>
+</resources>
